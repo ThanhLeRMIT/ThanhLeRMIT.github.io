@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Set colour/border variables for ease of modification*/
+    --colour-one: rgb(0,0,0);
+    --colour-two: rgb(80,80,80);
+    --colour-three: rgb(180,180,180);
+    --colour-four: rgb(250,250,250);
+    --border-one: solid 3px black;
+}
+
+#bg-grid-container{
+    /*Set background colour of container*/
+    background-color: var(--colour-four);
+
+    /*Set VH allows grid to only adjust itself when window is vertically changed*/
+    width: 72vh;
+    height: 100vh;
+
+ /*    width: 100vw; 
+    height: 166vw; */
+
+    margin: 0 auto;
+    display: grid;
+
+    /* Set 4 columns + rows as well as how long the "fractions" within this space are*/
+    grid-template-columns: 1fr 0.4fr 2.2fr 0.6fr; 
+    grid-template-rows: 1fr 0.6fr 1.6fr 1.6fr; 
+
+    /*Sets gap between the items placed inside the grid*/
+    gap: 10px;
+
+}
+
+.grid-item{
+    /*Applies the set border variable of 3px Black to the Grid*/
+    border: var(--border-one);
+
+}
+
+#item-one{
+    /*Sets the lines within the grid that this item begins+ends*/
+    grid-column: 1/3; 
+    grid-row: 1/3;
+    
+    /*Sets a linear gradient of colour using our preset variables*/
+    background-image: linear-gradient(to bottom, var(--colour-two), var(--colour-three)); 
+}
+
+#item-two{
+    grid-column: 3/5;
+    grid-row: 1/2;
+    background-image: linear-gradient(to bottom right, var(--colour-one), var(--colour-four));
+}
+
+#item-three{
+    grid-column: 3/5;
+    grid-row: 2/3;
+    background-image: linear-gradient(to top right, var(--colour-one), var(--colour-four));
+}
+
+#item-four{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    background-image: linear-gradient(to right, var(--colour-one), var(--colour-four));
+}
+
+
+#item-five{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: linear-gradient(to bottom, var(--colour-one), var(--colour-four));
+}
+
+#item-six{
+    grid-column: 4/5;
+    grid-row: 3/4;
+    background-image: linear-gradient(to bottom, var(--colour-two), var(--colour-one));
+}
+
+#item-seven{
+    grid-column: 1/5;
+    grid-row: 4/5;
+    background-image: linear-gradient(to right, var(--colour-one), var(--colour-four));
+}
+
+
