@@ -1,0 +1,152 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+}
+
+body{
+  font-family: fantasy;
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-family: monospace;
+  font-size: 3rem;
+  animation: colourCycle 4s ease-in infinite;
+}
+
+/*Animation for cycling through colours*/
+@keyframes colourCycle {
+  0%{color: palevioletred;}
+  25%{color: purple;}
+  50%{color: darkred;}
+  75%{color: purple;}
+  100%{color: palevioletred}
+}
+
+/*Applies shaking animation on hover*/
+#modeButton:hover {
+  animation: shake 0.2s;
+}
+
+/*Applies shaking animation on click, with more time I would have liked this to also play Hosonos music*/
+h1:active{
+  animation: shake 0.1s;
+}
+
+/*Shaking animation, sets keyframes for different x/y/rotation specifications*/
+@keyframes shake {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  75% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+/*Styles Dark/Light Mode button and applies margin for spacing*/
+#modeButton{
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/*gives all list itmes right margin for spacing*/
+.listitems{
+  margin-right: 20px;
+}
+
+/*changes background colour on hovering href links to feel more responsive*/
+.listitems:hover{
+  background-color: pink;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+@media all and (prefers-reduced-motion){
+  
+}
