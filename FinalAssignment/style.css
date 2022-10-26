@@ -1,0 +1,66 @@
+/*General styling + positioning of elements*/
+
+#thepage{
+  /*used to center all elements within the body*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1553640627-57a6de3bf0ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1933&q=80');
+}
+
+
+#base {
+  margin-top: 100px;
+  width: 300px;
+  height: 300px;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+  background: grey;
+  /*used to center joystick within the container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid violet;
+
+}
+
+#jstickbase{
+  width: 60px;
+  height: 60px;
+  background-color: black;
+}
+
+
+#joystick {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: red;
+  border: 5px solid white;
+  position:absolute;
+}
+
+#buttonholder {
+  margin-top: 1000px;
+  width: 310px;
+  height: 300px;
+  position: absolute;
+  /* font size set to 0 in order to remove space between buttons*/
+  font-size: 0;
+}
+
+
+.directions{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 5px solid violet;
+  font-weight: bolder;
+  font-size: 25px;
+  
+ 
+}
+
+
+

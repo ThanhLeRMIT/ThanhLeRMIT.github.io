@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--Joystick metaphor, Numpad refers to Fighting Game Notation for directional inputs -->
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="script.js">
+         </script>
+
+    </head>
+
+    <body id="thepage">
+       
+       <div id ="base">
+    
+        <div id="jstickbase"></div>
+        <div id="joystick"></div>
+            
+        </div>
+        
+        <!-- adds id to div containing direction buttons or styling. adds on click event to call clicking audio-->
+        <div id="buttonholder" onclick="sound.play()">
+        <!--adds class to all all buttons in order to universally style, also individually assigned onclick functions for specific directions-->
+        <button class="directions" onclick="topleft()">7</button>
+        <button class="directions" onclick="upward()">8</button>
+        <button class="directions" onclick="topright()">9</button>
+        <button class="directions" onclick="leftward()">4</button>
+        <button class="directions" onclick="middle()">5</button>
+        <button class="directions" onclick="rightward()">6</button>
+        <button class="directions" onclick="bottomleft()">1</button>
+        <button class="directions" onclick="downward()">2</button>
+        <button class="directions" onclick="bottomright()">3</button>
+        </div>
+       
+
+
+        </body>
+
+</html>
